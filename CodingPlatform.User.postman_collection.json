@@ -1,0 +1,197 @@
+{
+	"info": {
+		"_postman_id": "d20c7fac-98ca-484e-ac22-e390d2c6ba92",
+		"name": "User Requests",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "41839124"
+	},
+	"item": [
+		{
+			"name": "Create User",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/problems/users?username=u&email=u@example.com&isAdmin=false",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"problems",
+						"users"
+					],
+					"query": [
+						{
+							"key": "username",
+							"value": "u"
+						},
+						{
+							"key": "email",
+							"value": "u@example.com"
+						},
+						{
+							"key": "isAdmin",
+							"value": "false"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Users",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/problems/users/regular",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"problems",
+						"users",
+						"regular"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Unsolved Problems",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/problems?username=b",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"problems"
+					],
+					"query": [
+						{
+							"key": "isAdmin",
+							"value": "false",
+							"disabled": true
+						},
+						{
+							"key": "username",
+							"value": "b"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Mark Problem as Solved",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/problems/mark-solved/1?username=b",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"problems",
+						"mark-solved",
+						"1"
+					],
+					"query": [
+						{
+							"key": "username",
+							"value": "b"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Filter Problems",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/problems/filter?username=a&level=Easy&tags=array",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"problems",
+						"filter"
+					],
+					"query": [
+						{
+							"key": "username",
+							"value": "a"
+						},
+						{
+							"key": "level",
+							"value": "Easy"
+						},
+						{
+							"key": "tags",
+							"value": "array"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Solved Problems",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/problems/solved?email=a@example.com",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"problems",
+						"solved"
+					],
+					"query": [
+						{
+							"key": "email",
+							"value": "a@example.com"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

@@ -1,0 +1,210 @@
+{
+	"info": {
+		"_postman_id": "ec4b4b4c-50fa-4707-8f6f-fc3fa22f3d1b",
+		"name": "Admin Requests",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "41839124"
+	},
+	"item": [
+		{
+			"name": "Create Admin",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/problems/users?username=a&email=a@example.com&isAdmin=true",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"problems",
+						"users"
+					],
+					"query": [
+						{
+							"key": "username",
+							"value": "a"
+						},
+						{
+							"key": "email",
+							"value": "a@example.com"
+						},
+						{
+							"key": "isAdmin",
+							"value": "true"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Admins",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/problems/users/admins",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"problems",
+						"users",
+						"admins"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Add Problem",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"2 Sum\",\r\n    \"description\": \"Find 2 numbers that add up to target\",\r\n    \"tags\": [\"array\"],\r\n    \"level\": \"Easy\",\r\n    \"points\": 20\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/problems?username=a",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"problems"
+					],
+					"query": [
+						{
+							"key": "username",
+							"value": "a"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Problem",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/problems/admin/problems",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"problems",
+						"admin",
+						"problems"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete Problem",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/problems/admin/1?username=b",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"problems",
+						"admin",
+						"1"
+					],
+					"query": [
+						{
+							"key": "username",
+							"value": "b"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update Problem",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"Bubble Sort\",\r\n    \"description\": \"jfkrwjfkjfn\",\r\n    \"tags\": [\"array\"],\r\n    \"level\": \"Easy\",\r\n    \"points\": 10\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/problems/admin/2?username=a",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"problems",
+						"admin",
+						"2"
+					],
+					"query": [
+						{
+							"key": "username",
+							"value": "a"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
